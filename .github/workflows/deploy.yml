@@ -17,8 +17,8 @@ jobs:
 
       - name: Authenticate to Salesforce
         run: |
-          echo "${{ secrets.SFDX_AUTH_URL }}" | sf org login sfdx-url --alias SFDC Project --set-default --sfdx-url-stdin
+          echo "${{ secrets.SFDX_AUTH_URL }}" | sf org login sfdx-url --alias "SFDC Project" --set-default --sfdx-url-stdin
 
       - name: Deploy to Salesforce
         run: |
-          sf project deploy start --target-org SFDC Project --wait 30
+          sf project deploy start --target-org "SFDC Project" --wait 30
